@@ -8,7 +8,7 @@ def my_form():
 def my_form_post():
     wage = request.form['wage']
     hours = request.form['hours']
-    multiply_text = int(hours) * int(wage)
+    multiply_text = float(hours) * float(wage)
     return str(multiply_text)
 if __name__ == '__main__':
     app.run(debug=True)
