@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: python:3.6.0
+    steps:
+      - checkout
+      - run: 
+      name: Install requirements
+      command: pip install -r requirements.txt
+      - run: 
+      name: Check for syntax and other errors
+      command: pylint main.py
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git config --global user.email "vinyl1225@gmail.com"
+            git config --global user.name "Caleb Priest"
+            git push https://heroku:94616200-b199-4200-bf43-05a6baa694a0@git.heroku.com/cherry-pudding-59706.git master
