@@ -4,9 +4,7 @@ jobs:
     docker:
       - image: python:3.6.0
     steps:
-      - run: 
-          name: Install requirements
-          command: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
       - checkout
       - run: 
           name: Check for syntax and other errors
