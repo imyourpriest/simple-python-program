@@ -9,7 +9,7 @@ jobs:
           name: Install requirements
           command: pip install -r requirements.txt
       - run: 
-          name: Check for syntax and other errors
+          name: Check for syntax and errors
           command: pylint main.py
       - run:
           name: Deploy Master to Heroku
