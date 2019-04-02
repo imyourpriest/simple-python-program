@@ -1,4 +1,6 @@
-from flask import Flask, request, render_template, os
+import os
+
+from flask import Flask, request, render_template
 app = Flask(__name__)
 port = int(os.environ.get('PORT', 5000))
 @app.route('/')
