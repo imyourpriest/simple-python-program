@@ -1,1 +1,1 @@
-web: gunicorn :$PORT main:app --log-file=-
+web: gunicorn :$PORT wsgi.py --log-file=-
